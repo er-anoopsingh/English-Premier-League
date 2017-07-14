@@ -1,0 +1,36 @@
+
+  <table class="table table-bordered table-hover">
+    <caption class="text-center">Season {{matches.year}}</caption>
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Match</th>
+        <th>Date</th>
+        <th>Club-1</th>
+        <th>Club-2</th>
+        <th>Winner</th>
+        <th>Score(club-1: club-2)</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="(week, Obj) in matches.showLeague">
+          <tr ng-repeat="eachMatch in league = (Obj.matches | filter: matches.name | filter: matches.mon)">
+            <td>{{$index +1 > 1?'':$parent.$index+1}}</td>
+            <td><a href="" ng-click="matches.disp(eachMatch)">view match {{$index + 1}}</a></td>
+            <td>{{eachMatch.date}}</td>
+            <td><a href="" ng-click="matches.viewTeam(eachMatch.team1.code)">
+                  <img ng-src="img/teams/{{eachMatch.team1.code}}.png" class="icon-img">{{eachMatch.team1.name}}
+                </a>
+            </td>
+            <td><a href="" ng-click="matches.viewTeam(eachMatch.team2.code)">
+                  <img ng-src="img/teams/{{eachMatch.team2.code}}.png" class="icon-img">{{eachMatch.team2.name}}
+                </a>
+            </td>
+            <td ng-if="eachMatch.score1 > eachMatch.score2">{{eachMatch.team1.name}}</td>
+            <td ng-if="eachMatch.score2 > eachMatch.score1">{{eachMatch.team2.name}}</td>
+            <td ng-if="eachMatch.score1 == eachMatch.score2 && eachMatch.score1 != null">Draw</td>
+            <td ng-if="eachMatch.score1 == null">To be played</td>
+            <td ng-if="eachMatch.score1 != null">{{eachMatch.score1}} : {{eachMatch.score2}}</td>
+            <td ng-if="eachMatch.score1 == null">NA</td>
+          </tr>
+        </tbody>
+  </table>

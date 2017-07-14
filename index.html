@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="league">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>English Premier League</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" >
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<!--Navbar-->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand"><img src="img/icon.png" class="logo" alt=""> EPL</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class=" navbar-collapse collapse" id="menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">League</a></li>
+          <li><a href="#!/allteams">All Teams</a></li>
+        </ul>
+      </div>
+    </div><!--end of navbar-->
+
+<div class="container">
+  <div ng-view>
+
+  </div>
+</div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/lodash.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="js/getDataFactory.js"></script>
+
+    <!-- Include js for each team stats-->
+    <script src="js/eachTeam/eachTeamServices.js"></script>
+    <script src="js/eachTeam/eachTeamController.js"></script>
+
+    <!-- Include js for all matches-->
+    <script src="js/allLeagueMatches/allMatchesService.js"></script>
+    <script src="js/allLeagueMatches/allMatchesController.js"></script>
+  </body>
+</html>

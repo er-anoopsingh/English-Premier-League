@@ -1,0 +1,39 @@
+<div class="row" >
+  <div class="row" ng-if="teams.year=='2015/16'">
+    <h3 style="text-align: center;">Season 2015/16</h3>
+    <div class="row" style="margin-top: 50px;">
+
+      <div class="col-xs-6">
+        <img ng-src="img/teams/{{teams.team1.code}}.png" class="img-responsive icon-single" alt="">
+      </div>
+      <div class="col-xs-6">
+        <h2><strong>{{teams.team1.name}}</strong></h2><hr>
+        <h4><strong>Total Matches:</strong> {{teams.team1.won + teams.team1.lost + teams.team1.draw}}</h4>
+        <h4><strong>Won:</strong> {{teams.team1.won}}</h4>
+        <h4><strong>Lost:</strong> {{teams.team1.lost}}</h4>
+        <h4><strong>Draw:</strong> {{teams.team1.draw}}</h4>
+        <h4><strong>Total Goals:</strong> {{teams.team1.count}}</h4>
+      </div>
+
+    </div>
+  <a href="#!/" class="col-xs-12 align-cent a-league">Back to League</a>
+  </div>
+
+  <div class="row" ng-if="teams.year=='2016/17'">
+    <h3 style="text-align: center;">Season 2016/17</h3>
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-xs-6">
+        <img ng-src="img/teams/{{teams.team2.code}}.png" class="img-responsive icon-single" alt="">
+      </div>
+      <div class="col-xs-6">
+        <h2><strong>{{teams.team2.name}}</strong></h2><hr>
+        <h4><strong>Total Matches:</strong> {{teams.team2.won + teams.team2.lost + teams.team2.draw}}</h4>
+        <h4><strong>Won:</strong> {{teams.team2.won}}</h4>
+        <h4><strong>Lost:</strong> {{teams.team2.lost}}</h4>
+        <h4><strong>Draw:</strong> {{teams.team2.draw}}</h4>
+        <h4><strong>Total Goals:</strong> {{teams.team2.count}}</h4>
+      </div>
+    </div>
+  <a href="#!/" class="col-xs-12 align-cent a-league">Back to League</a>
+  </div>
+</div>

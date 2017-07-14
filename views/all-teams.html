@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-xs-6 text-center">
+      <button class="btn btn-cust" ng-click="teams.season=teams.statS01">Season 2015/16</button>
+    </div>
+    <div class="col-xs-6 text-center">
+      <button class="btn btn-cust" ng-click="teams.season=teams.statS02">Season 2016/17</button>
+      </div>
+  <table class="table table-bordered table-hover">
+    <caption class="text-center" ng-if="teams.season==teams.statS01"><h4>Season 2015/16</h4></caption>
+    <caption class="text-center" ng-if="teams.season==teams.statS02"><h4>Season 2016/17 </caption>
+    <thead>
+      <tr>
+        <th>Sno.</th>
+        <th><a href="" ng-click="teams.sortType = 'name'; teams.sortReverse = !teams.sortReverse">Team
+              <span ng-show="teams.sortType != 'name'" class="caret"></span>
+              <span ng-show="teams.sortType == 'name' && !teams.sortReverse" class="caret"></span>
+              <span ng-show="teams.sortType == 'name' && teams.sortReverse" class="caret caret-up"></span>
+            </a>
+        </th>
+        <th>Total Matches</th>
+        <th><a href="" ng-click="teams.sortType = 'won'; teams.sortReverse = !teams.sortReverse">Won
+              <span ng-show="teams.sortType != 'won'" class="caret"></span>
+              <span ng-show="teams.sortType == 'won' && !teams.sortReverse" class="caret"></span>
+              <span ng-show="teams.sortType == 'won' && teams.sortReverse" class="caret caret-up"></span>
+            </a>
+        </th>
+        <th><a href="" ng-click="teams.sortType = 'lost'; teams.sortReverse = !teams.sortReverse">Lost
+              <span ng-show="teams.sortType != 'lost'" class="caret"></span>
+              <span ng-show="teams.sortType == 'lost' && !teams.sortReverse" class="caret"></span>
+              <span ng-show="teams.sortType == 'lost' && teams.sortReverse" class="caret caret-up"></span>
+            </a>
+        </th>
+        <th><a href="" ng-click="teams.sortType = 'draw'; teams.sortReverse = !teams.sortReverse">Draw
+              <span ng-show="teams.sortType != 'draw'" class="caret"></span>
+              <span ng-show="teams.sortType == 'draw' && !teams.sortReverse" class="caret"></span>
+              <span ng-show="teams.sortType == 'draw' && teams.sortReverse" class="caret caret-up"></span>
+            </a>
+        </th>
+        <th><a href="" ng-click="teams.sortType = 'count'; teams.sortReverse = !teams.sortReverse">Total Score
+              <span ng-show="teams.sortType != 'count'" class="caret"></span>
+              <span ng-show="teams.sortType == 'count' && !teams.sortReverse" class="caret"></span>
+              <span ng-show="teams.sortType == 'count' && teams.sortReverse" class="caret caret-up"></span>
+            </a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr ng-repeat="eachTeam in teams.season | orderBy:teams.sortType:teams.sortReverse">
+            <td>{{$index +1}}</td>
+            <td><a href="" ng-click="teams.disp(eachTeam.code)">
+                  <img ng-src="img/teams/{{eachTeam.code}}.png" class="icon-img">{{eachTeam.name}}
+                </a>
+            </td>
+            <td>{{eachTeam.won + eachTeam.lost + eachTeam.draw}}</td>
+            <td>{{eachTeam.won}}</td>
+            <td>{{eachTeam.lost}}</td>
+            <td>{{eachTeam.draw}}</td>
+            <td>{{eachTeam.count}}</td>
+          </tr>
+        </tbody>
+  </table>
+  <a href="#!/" class="col-xs-12 align-cent a-league">Back to League</a>
+</div>

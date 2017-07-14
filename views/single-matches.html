@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-12 align-cent">
+    <h1>Played on {{matches.singleMatch.date}}</h1>
+  </div>
+
+  <div class="col-xs-4 align-cent" ng-class="(matches.singleMatch.score1 > matches.singleMatch.score2) ? 'winner' : 'result'">
+    <img src="img/teams/{{matches.singleMatch.team1.code}}.png" class="img-responsive icon-single" alt="">
+    <h2>{{matches.singleMatch.team1.name}}</h2>
+    <h2>{{matches.singleMatch.score1}}</h2>
+  </div>
+  <div class="col-xs-4 align-cent" >
+    <img src="img/vs.png" class="img-responsive versus" alt="">
+  </div>
+  <div class="col-xs-4 align-cent" ng-class="(matches.singleMatch.score2 > matches.singleMatch.score1) ? 'winner' : 'result'">
+    <img src="img/teams/{{matches.singleMatch.team2.code}}.png" class="img-responsive icon-single" alt="">
+    <h2>{{matches.singleMatch.team2.name}}</h2>
+    <h2>{{matches.singleMatch.score2}}</h2>
+  </div>
+
+  <a href="#!/" class="col-xs-12 align-cent a-league">Back to League</a>
+</div>
