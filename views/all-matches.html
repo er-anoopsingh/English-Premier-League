@@ -1,5 +1,5 @@
 <div class="row" id="top">
-<div class="col-xs-3 text-center">
+<div class="col-xs-6 col-sm-3 text-center">
   <div class="dropdown">
     <button class="btn btn-cust dropdown-toggle" type="button" data-toggle="dropdown">Filter By Season
     <span class="caret"></span></button>
@@ -9,7 +9,7 @@
     </ul>
   </div>
 </div>
-<div class="col-xs-3 text-center">
+<div class="col-xs-6 col-sm-3 text-center">
   <div class="dropdown">
     <button class="btn btn-cust dropdown-toggle" type="button" data-toggle="dropdown">Filter By Team
     <span class="caret"></span></button>
@@ -29,8 +29,9 @@
     </ul>
 
   </div>
+  {{matches.name}}
 </div>
-<div class="col-xs-3 text-center">
+<div class="col-xs-6 col-sm-3 text-center">
   <div class="dropdown">
     <button class="btn btn-cust dropdown-toggle" type="button" data-toggle="dropdown">Filter By Month
     <span class="caret"></span></button>
@@ -43,19 +44,14 @@
       </li>
     </ul>
   </div>
+  {{matches.mon}}
 </div>
-<div class="col-xs-3 text-center">
+
+<div class="col-xs-6 col-sm-3 text-center">
     <a ng-href="#!/allteams" class="btn btn-cust">View All Teams</a>
   </div>
 </div>
 
-
-  <div class="col-xs-5">
-      <h4 class="pull-right">{{matches.name}}</h4>
-  </div>
-  <div class="col-xs-5">
-        <h4 class="text-center">{{matches.mon}}</h4>
-  </div>
   <div all-matches>
   </div>
 

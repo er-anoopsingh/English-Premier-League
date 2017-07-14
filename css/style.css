@@ -15,14 +15,14 @@ h2{
 
 /**************Navbar**************/
 .navbar{
-    background: url('/img/banner.png') no-repeat center;
+    background: url('../img/banner.png') no-repeat center;
     background-color: #E6E6FA;
     padding: 20px;
     border: 0;
     color: #080009 !important;
     font-weight: bold;
-
 }
+
 .navbar a:hover{
   color: #080009 !important;
   font-weight: bold;
@@ -108,6 +108,7 @@ h2{
 .btn-cust{
   background-color: #38003C;
   color: #fff;
+  margin-top: 10px;
 }
 
 .btn-cust:hover{
@@ -127,4 +128,15 @@ a{
 
 caption{
   font-size: 16px;
+}
+
+@media only screen and (max-width: 768px){
+  .navbar{
+      background: none;
+      background-color: #E6E6FA;
+      padding: 20px;
+      border: 0;
+      color: #080009 !important;
+      font-weight: bold;
+  }
 }
