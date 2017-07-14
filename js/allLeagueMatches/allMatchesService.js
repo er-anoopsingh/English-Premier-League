@@ -1,5 +1,6 @@
 angular.module("league")
 
+/*factory to format dates and return all the data for league*/
 .factory('getSeason', ['getData','$filter', function(getData, $filter){
 
   return {
@@ -30,6 +31,7 @@ angular.module("league")
   }
 }])
 
+/*factory to share data between various controllers*/
 .factory('shareData', function(){
   return{
     matchObj : '',

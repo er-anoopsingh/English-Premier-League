@@ -1,6 +1,6 @@
 angular.module("league")
 
-/*controller to get list of all teams in the league*/
+/*controller to get details of all matches in all the leagues*/
 .controller('getMatchesCtrl', ['getTeams','getSeason','shareData','$location',
   function(getTeams, getSeason, shareData, $location){
 
@@ -53,12 +53,14 @@ angular.module("league")
 
 }])
 
+/*controller to dsiplay single match details*/
 .controller('displayMatchCtrl', ['shareData', function(shareData){
 
   var vm = this;
   vm.singleMatch = shareData.matchObj;
 }])
 
+/*directive to show all matches in a league*/
 .directive('allMatches', function() {
   return {
     scope: true,

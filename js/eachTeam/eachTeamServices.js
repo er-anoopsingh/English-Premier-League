@@ -1,5 +1,6 @@
 angular.module("league")
 
+/*factory to store all teams in a league*/
 .factory('getTeams', ['getData', function(getData){
 
   return {
@@ -18,6 +19,7 @@ angular.module("league")
   }
 }])
 
+/*factory to store all details per teams in a league*/
 .factory('getTeamStats', ['getData', function(getData){
 
   return {
@@ -37,7 +39,7 @@ angular.module("league")
 
 }])
 
-
+/*helper function to store all teams in a league*/
 function getTeamsFn(data){
   var match = data;
   var teamArray = [];
@@ -55,6 +57,7 @@ function getTeamsFn(data){
   return _.uniqBy(teamArray, 'code');
 }
 
+/*helper function to store all details per teams in a league*/
 function getTeamStatsFn(data){
   var match = data;
   var teamStats = [];

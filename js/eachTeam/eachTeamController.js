@@ -39,6 +39,7 @@ angular.module("league")
 
 }])
 
+/*controller to display details for each team*/
 .controller('dispTeamCtrl', ['getTeamStats', 'shareData', function(getTeamStats, shareData){
 
   var vm = this;
