@@ -1,5 +1,6 @@
 angular.module("league")
 
+/*factory get data from the api request*/
 .factory('getData',['$http', function($http){
   return {
 

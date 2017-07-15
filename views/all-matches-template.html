@@ -1,4 +1,3 @@
-
   <table class="table table-bordered table-hover" style="margin-top: 10px">
     <caption class="text-center">Season {{matches.year}}</caption>
     <thead>
@@ -13,7 +12,7 @@
       </tr>
     </thead>
     <tbody ng-repeat="(week, Obj) in matches.showLeague">
-          <tr ng-repeat="eachMatch in league = (Obj.matches | filter: matches.name | filter: matches.mon)">
+          <tr ng-repeat="eachMatch in league = (Obj.matches | filter: matches.name | filter: matches.mon | filter: matches.search)">
             <td>{{$index +1 > 1?'':$parent.$index+1}}</td>
             <td><a href="" ng-click="matches.disp(eachMatch)">view match {{$index + 1}}</a></td>
             <td>{{eachMatch.date}}</td>
